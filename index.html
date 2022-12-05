@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game: Project</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="./assets/images/undisplayed.PNG" type="image/x-icon"
+</head>
+<body onload="generateMatrix()">
+    <div class="heading">
+        <h1>Flip Flop Game</h1>
+    </div>
+    <div class="wrapper">
+        <center>
+            <div class="game-board"></div>
+        </center>       
+         <div class="game-selections">
+
+                <div class="radio-buttons">
+                        <div>
+                            <input type="radio" id="2pic" name="drone" value="series of 2 pics" onclick="change_mode(2)">
+                            <label for="series">Series of 2 pics</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="3pic" name="drone" value="series of 3 pics" onclick="change_mode(3)">
+                            <label for="series">Series of 3 pics</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="4pic" name="drone" value="series of 4 pics" onclick="change_mode(4)">
+                            <label for="series">Series of 4 pics</label>
+                        </div>
+                </div>
+                <div class="action-buttons">
+                    <button onclick="load_base()">NEW GAME</button>
+                    <br>
+                    <button onclick="show_solution()">SHOW</button>
+                    <br>
+                    <button onclick="display_help()">HELP</button>
+                    <br>
+                </div>
+            </center>
+        </div>
+        <div class="overlays">
+            <center>
+                <div class="instructions" id="inst" style="display:none">
+                </div>
+                <div class="win-alert" style="display:none" id="w">
+                    <h4 style="color: green;">You Won! Great Job!</h4>
+                </div>
+                <div class="lost-alert" style="display:none" id="l">
+                </div>
+            </center>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
